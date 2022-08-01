@@ -8,7 +8,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fanggadewangga.noteit.feature_note.domain.model.InvalidNoteException
 import com.fanggadewangga.noteit.feature_note.domain.model.Note
-import com.fanggadewangga.noteit.feature_note.domain.model.Note.Companion.noteColor
 import com.fanggadewangga.noteit.feature_note.domain.use_case.NoteUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -28,7 +27,7 @@ class AddEditNoteViewModel @Inject constructor(
     private val _noteContent= mutableStateOf(NoteTextFieldState(hint = "Enter some contents..."))
     val noteContent: State<NoteTextFieldState> = _noteContent
 
-    private val _noteColor = mutableStateOf(Note.noteColor.random().toArgb())
+    private val _noteColor = mutableStateOf(Note.noteColors.random().toArgb())
     val noteColor: State<Int> = _noteColor
 
     private val _eventFlow = MutableSharedFlow<UiEvent>()
