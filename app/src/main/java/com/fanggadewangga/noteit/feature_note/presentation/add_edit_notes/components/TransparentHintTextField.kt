@@ -18,7 +18,7 @@ fun TransparentHintTextField(
     modifier: Modifier = Modifier,
     isHintVisible: Boolean = true,
     onValueChange: (String) -> Unit,
-    textStyle: TextStyle = TextStyle.Default,
+    textStyle: TextStyle = TextStyle(),
     singleLine: Boolean = false,
     onFocusChange: (FocusState) -> Unit
 ) {
