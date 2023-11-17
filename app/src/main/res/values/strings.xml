@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NoteIt</string>
+    <string name="sort">Sort</string>
 </resources>

@@ -17,10 +17,12 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
+import com.fanggadewangga.noteit.core.TestTags
 import com.fanggadewangga.noteit.feature_note.domain.model.Note
 
 @Composable
@@ -32,7 +34,7 @@ fun NoteItem(
     onDeleteClick: () -> Unit
 ) {
     Box(
-        modifier = modifier
+        modifier = modifier.testTag(TestTags.NOTE_ITEM_TEST_TAG)
     ){
         Canvas(modifier = Modifier.matchParentSize()) {
             val clipPath = Path().apply {
